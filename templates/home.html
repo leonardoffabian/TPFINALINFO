@@ -1,0 +1,23 @@
+
+{% extends 'base.html' %}
+
+
+
+	{% block content %}
+	
+
+	HOME PANTALLA <br> <br>
+
+	<a href="{% url 'productos:listar' %}"> Listar Productos </a>
+
+    <br>
+
+	<a href="{% url 'productos:cargar_p' %}">Cargar Productos</a><br>
+
+	<a href="{% url 'productos:cargar_r' %}">Cargar Rubro</a><br>
+
+	</a><br>
+	
+
+
+	{% endblock content%}

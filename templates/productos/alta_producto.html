@@ -1,0 +1,24 @@
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+CARGAR UN PRODUCTO
+<div style='margin:50px;'> 
+	<form method="POST" enctype="multipart/from-data">{%csrf_token %}
+		{{form.as_p}}
+
+		<input type="submit" name="Enviar" value="Guardar">
+		
+	</form>
+		
+	
+
+
+
+
+</div>
+
+<a href="{% url 'home' %}">  'Volver a Home' </a>
+{% endblock content%} 
+	

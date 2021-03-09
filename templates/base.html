@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div style='margin:50px;'>  <h5> ENCABEZADO </h5> </div>
+    {% if user.is_authenticated %}
+		<span>hola {{user.username}}</span>
+		<a href="{% url 'logout' %}">LOGOUT</a>
+
+ 	{% else %}
+ 		<a href="{% url 'login' %}">LOGIN</a>
+    {% endif %}
+    <div>
+	{% block content %}
+
+
+	{% endblock %}
+	
+
+	<div style='margin:100px;'>  <h5> PIE </h5> </div>
+</body>
+</html>
